@@ -1,7 +1,7 @@
 # For build run clean and test
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g $(shell pkg-config --cflags gtk4)
+CFLAGS = -O3 -Wall -Wextra -Werror -g $(shell pkg-config --cflags gtk4)
 LDFLAGS = $(shell pkg-config --libs gtk4)
 
 SRC_DIR = src
