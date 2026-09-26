@@ -73,4 +73,4 @@ The graph uses:
 - X-axis: Speed
 - Y-axis: Distance
 - Range: 0 to 1000
-- Interval: 50
+- Interval: 51

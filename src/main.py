@@ -1,9 +1,3 @@
-"""Finding Break Distance.
-
-Port of the original GTK4 app (main.c/ui.c) to Python, using Tkinter for
-the window/widgets and Matplotlib for the equation graph.
-"""
-
 import os
 import tkinter as tk
 from tkinter import messagebox
@@ -25,7 +19,6 @@ GRAPH_MAX_X = 1000.0
 GRAPH_STEP = 50.0
 
 PLACEHOLDER_TEXT = "Enter Speed(km/h)"
-
 
 class App:
     def __init__(self, root):
@@ -122,12 +115,10 @@ class App:
         canvas.draw()
         canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
 
-
 def main():
     root = tk.Tk()
     App(root)
     root.mainloop()
-
 
 if __name__ == "__main__":
     main()

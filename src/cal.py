@@ -1,15 +1,6 @@
-"""Least-squares quadratic fit and breaking-distance calculation.
-
-Port of the original cal.c/cal.h. Given a CSV dataset of (speed, distance)
-points, fits y = a0 + a1*x + a2*x^2 using the normal equations solved by
-Gauss-Jordan elimination, matching the original algorithm exactly.
-"""
-
 MAX_DATA = 128
 
-
 def _solve(a):
-    """Solve a 3x4 augmented matrix in place via Gauss-Jordan elimination."""
     for i in range(3):
         pivot = i
         for r in range(i + 1, 3):
@@ -30,11 +21,6 @@ def _solve(a):
 
 
 def calculate_polynomial(filename):
-    """Read (x, y) pairs from filename and fit y = a0 + a1*x + a2*x^2.
-
-    Returns an (a0, a1, a2) tuple on success, or None if the file is
-    missing or does not contain enough valid data points.
-    """
     try:
         with open(filename, "r") as f:
             lines = f.readlines()
@@ -44,7 +30,7 @@ def calculate_polynomial(filename):
     x = []
     y = []
 
-    for line in lines[1:]:  # first line is the column header, skip it
+    for line in lines[1:]:
         if len(x) >= MAX_DATA:
             break
 
