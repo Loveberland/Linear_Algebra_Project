@@ -1,7 +1,3 @@
-from pathlib import Path
-
-content = r"""# How to Use
-
 ## 1. Clone the repository
 
 ```bash
@@ -73,4 +69,4 @@ The graph uses:
 - X-axis: Speed
 - Y-axis: Distance
 - Range: 0 to 1000
-- Interval: 51
+- Interval: 50
